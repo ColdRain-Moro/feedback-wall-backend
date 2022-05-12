@@ -1,8 +1,6 @@
 package io.github.coldrain.model.database
 
-import io.github.coldrain.model.database.table.TablePost
-import io.github.coldrain.model.database.table.TableReply
-import io.github.coldrain.model.database.table.TableUser
+import io.github.coldrain.model.database.table.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.StdOutSqlLogger
@@ -29,7 +27,10 @@ object DatabaseInit {
             SchemaUtils.create(
                 TableReply,
                 TablePost,
-                TableUser
+                TableUser,
+                TableCollect,
+                TableLike,
+                TableUserRegisterRequest
             )
         }
     }

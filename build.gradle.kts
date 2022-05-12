@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.apache.commons:commons-email:1.5")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-auth-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-auth-jwt-jvm:$ktor_version")
@@ -33,6 +34,13 @@ dependencies {
     implementation("io.ktor:ktor-server-websockets-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+    // 腾讯云对象存储sdk
+    implementation("com.qcloud:cos_api:5.6.77")
+
+    // ktor client
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-cio:$ktor_version")
 
     // orm
     implementation("org.jetbrains.exposed:exposed-java-time:0.38.2")

@@ -17,6 +17,8 @@ inline fun <reified T> String.formJson(): T {
     return gson.fromJson(this, object : TypeToken<T>() {}.type)
 }
 
+
+
 fun Any.toJson(): String {
     return gson.toJson(this)
 }
